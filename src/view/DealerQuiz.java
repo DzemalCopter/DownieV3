@@ -83,7 +83,7 @@ public class DealerQuiz extends JPanel
     }
 
     public void updateQuestionsAndAnswers() {
-            int level= mc.getPlayerLevel();
+            int level= mc.getQuizLevel();
             if(level<=4) {
                 String[] answerAndQuestions = mc.getQuestionAndAnswers();
 

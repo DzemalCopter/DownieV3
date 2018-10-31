@@ -32,11 +32,7 @@ public class MainView extends JFrame {
         mainController.creatPlayer(name);
         String noName = "";
         if (name.equals(noName)) {
-            int choice = JOptionPane.showOptionDialog(null,
-                    "Gib einen Namen ein!",
-                    "Dumm?",JOptionPane.OK_OPTION,
-                    JOptionPane.QUESTION_MESSAGE,
-                    null, null, null);
+          JOptionPane.showMessageDialog(null,"Gib deinen Namen ein!!!!");
 
 
         }else {

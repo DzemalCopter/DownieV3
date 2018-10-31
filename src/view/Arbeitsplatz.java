@@ -31,17 +31,28 @@ public class Arbeitsplatz extends JFrame
         schießen = new Schießen(this,mC).getPanel();
 
 
+        update(pan);
+    }
+    public void update(int pan){
         switch (pan){
             case 1:
+                this.getContentPane().removeAll();
+                this.getContentPane().invalidate();
                 this.setContentPane(töten);
+                this.getContentPane().revalidate();
                 break;
             case 2:
+                this.getContentPane().removeAll();
+                this.getContentPane().invalidate();
                 this.setContentPane(steuerklärung);
+                this.getContentPane().revalidate();
                 break;
             case 3:
+                this.getContentPane().removeAll();
+                this.getContentPane().invalidate();
                 this.setContentPane(feuern);
+                this.getContentPane().revalidate();
                 break;
-
 
         }
     }
@@ -59,7 +70,11 @@ public class Arbeitsplatz extends JFrame
         this.getContentPane().revalidate();
     }
     public void close(){
-        System.exit(0);
+        this.getContentPane().removeAll();
+        this.getContentPane().invalidate();
+        mC.updateMainView();
+        this.dispose();
+
     }
 
 

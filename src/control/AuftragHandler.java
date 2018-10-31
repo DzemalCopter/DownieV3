@@ -1,29 +1,28 @@
 package control;
 
 import model.Auftrag;
-import model.Level;
-import model.Auftrag;
+import model.AuftragTask;
 
 public class AuftragHandler
 {
 
-    private Level[] allLevels;
+    private AuftragTask[] allLevels;
 
     public AuftragHandler(){
-        allLevels = new Level[5];
+        allLevels = new AuftragTask[5];
         createAllLevels();
 
     }
 
     private void createAllLevels(){
         for(int i=0; i < allLevels.length; i++){
-            allLevels[i] = new Level(i+1);
+            allLevels[i] = new AuftragTask(i+1);
         }
     }
 
 
     public String[] getRandomChoices(int level){
-        Level lq = allLevels[level];
+        AuftragTask lq = allLevels[level];
         Auftrag auftrag = lq.getRandomAuftrag();
         String[] output = new String[4];
         output[0] = auftrag.getScenario();

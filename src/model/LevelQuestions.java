@@ -15,7 +15,7 @@ public class LevelQuestions {
         answers = new String[4];
         switch(level){
             case 1: questions = new Question[2];
-                questions[0] = new Question("Wie hält man eine Waffe?",new String[]{"Mit den Füßen","Mit dem Mund","Mit dem Händen","Garnicht"},"C" );
+                questions[0] = new Question("Wie hält man eine Waffe?",new String[]{"Mit den Füßen","Mit dem Mund","Mit den Händen","Garnicht"},"C" );
                 questions[1] = new Question("Welche der hier genannten Gegen stände sind Schusswaffen im Sinne des Waffengesetzes? ",new String[]{"Blasrohr","Druckluftgewehr mit Zulassungszeichen „F im Fünfeck“","Doppelflinte","C4"},"B" );
                 break;
             case 2: questions = new Question[3];
@@ -34,7 +34,7 @@ public class LevelQuestions {
                 break;
             case 5:
                 questions = new Question[1];
-                questions[0] = new Question("Wer hat TelCO Adventures programmiert? ",new String[]{"Keiner"," Arujan, Henri, Tpbias","Nur Ibrahim mit einer Hand"," Arujan, Henri, Tobias, ibrahim"},"D" );
+                questions[0] = new Question("Wer hat TelCO Adventures programmiert? ",new String[]{"Keiner"," Arujan, Henri, Tobias","Nur Ibrahim mit einer Hand"," Arujan, Henri, Tobias, ibrahim"},"D" );
 
 
         }

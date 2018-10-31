@@ -21,6 +21,7 @@ public class GamePanelHandler extends JPanel
     private String playerName;
     private int playerlevel;
 
+
     public GamePanelHandler(MainController mC, String playername, int level){
         this.mC = mC;
         ColorSlider cs = new ColorSlider();
@@ -34,7 +35,9 @@ public class GamePanelHandler extends JPanel
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                mC.creatArbeitsplatz(1);
+                    mC.creatArbeitsplatz(1);
+
+
                 töten.setEnabled(false);
                 steuer.setEnabled(false);
                 feuern.setEnabled(false);
@@ -46,7 +49,9 @@ public class GamePanelHandler extends JPanel
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                mC.creatArbeitsplatz(2);
+
+                    mC.creatArbeitsplatz(1);
+
                 töten.setEnabled(false);
                 steuer.setEnabled(false);
                 feuern.setEnabled(false);
@@ -58,7 +63,9 @@ public class GamePanelHandler extends JPanel
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                mC.creatArbeitsplatz(3);
+
+                    mC.creatArbeitsplatz(1);
+
                 töten.setEnabled(false);
                 steuer.setEnabled(false);
                 feuern.setEnabled(false);

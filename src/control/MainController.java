@@ -54,7 +54,7 @@ public class MainController {
 
 
     public String[] getAuftragAndChoices(){
-        String[] questions = qh.getRandomChoices(getQuizLevel());
+        String[] questions = qh.getRandomChoices(getPlayerLevel());
 
 
 
@@ -66,7 +66,7 @@ public class MainController {
         return output;
      }
         public String[] getQuestionAndAnswers(){
-        String[] questions = th.getRandomQuestion(getPlayerLevel());
+        String[] questions = th.getRandomQuestion(getQuizLevel());
         rightAnswer = questions[5];
 
 
@@ -82,7 +82,7 @@ public class MainController {
         boolean answer = false;
         if(chosenAnswer.equals(rightAnswer) ){
             answer = true;
-            player.setLevel(getPlayerLevel()+1);
+            player.setQuizLevel(getQuizLevel()+1);
         }
         return answer;
     }
@@ -94,6 +94,11 @@ public class MainController {
 
 
     }
+
+   public void close(){
+        ap.close();
+        ap = null;
+   }
 
 
 

@@ -24,8 +24,8 @@ public class Schießen {
 
                 if(shoot==6){
                     JOptionPane.showConfirmDialog(null,"Du hast ihn erfolgreich getötet! Starke Leistung!");
-                    mC.updateMainView();
-                    ap.dispose();
+
+                    mC.close();
 
                 }
                 shoot = shoot+1;
