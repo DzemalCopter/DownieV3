@@ -88,6 +88,7 @@ public class MainController {
     }
     public void updateMainView(){
         player.setLevel(getPlayerLevel()+1);
+        getAuftragAndChoices();
         mV.updateGamePanelHandler();
 
 
