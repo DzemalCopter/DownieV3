@@ -90,9 +90,8 @@ public class MainController {
         return output;
     }
     public String getSteuerklärung(){
-        if(getPlayerLevel()<=0){
             Sieg();
-        }
+
         String s = sh.getSteuerklärung(getPlayersteuerLevel());
         return s;
     }

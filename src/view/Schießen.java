@@ -23,7 +23,7 @@ public class Schießen {
             public void actionPerformed(ActionEvent e) {
 
                 if(shoot==6){
-                    JOptionPane.showConfirmDialog(null,"Du hast ihn erfolgreich getötet! Starke Leistung!");
+                    JOptionPane.showMessageDialog(null,"Du hast ihn erfolgreich getötet! Starke Leistung!");
 
                     mC.close();
 

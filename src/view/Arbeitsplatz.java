@@ -34,7 +34,7 @@ public class Arbeitsplatz extends JFrame
         dealerQuiz = new DealerQuiz(mC,this).getPanel();
         töten = new Töten(this).getPanel();
         steuerklärung = new Steuererklärung(this,mC).getPanel();
-        feuern = new Feuern(this).getPanel();
+        feuern = new Feuern(this,mC).getPanel();
         schießen = new Schießen(this,mC).getPanel();
         lose = new Lose(this,mC).getPanel();
 
