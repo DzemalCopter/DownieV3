@@ -2,12 +2,20 @@ package view;
 
 import control.MainController;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.util.zip.InflaterInputStream;
 
 public class Steuererklärung extends JPanel
 {
+
     private Arbeitsplatz ap;
     private JPanel panel;
     private JLabel label;
@@ -17,10 +25,13 @@ public class Steuererklärung extends JPanel
     private JTextField moderator;
     private MainController mC;
     private int chance;
+    private BufferedImage image;
+    private int level;
 
 
     public Steuererklärung(Arbeitsplatz ap, MainController mC)
     {
+        level = 0;
         chance = 3;
         this.mC = mC;
         this.ap = ap;
@@ -43,8 +54,9 @@ public class Steuererklärung extends JPanel
 
     public void updateButtons()
     {
-        mC.setPlayersteuerLevel(mC.getPlayersteuerLevel()+1);
-        int level = mC.getPlayersteuerLevel();
+        mC.setPlayersteuerLevel(mC.getPlayersteuerLevel() + 1);
+        level = level +1;
+
         if (level <= 3)
         {
             aufgabe.setText(mC.getSteuerklärung());
@@ -53,9 +65,13 @@ public class Steuererklärung extends JPanel
         {
             ok.setEnabled(false);
             label.setText("gewonnen!");
+            mC.close();
 
         }
     }
+
+
+
 
         public void feedback() {
         if (aufgabe.getText().equals(antwort.getText()))
@@ -64,8 +80,9 @@ public class Steuererklärung extends JPanel
             updateButtons();
         } else
         {
-            moderator.setText("Falsch, sie haben noch "+ chance+"  Chancen!!");
             chance = chance - 1;
+            moderator.setText("Falsch, sie haben noch "+ chance+"  Chancen!!");
+
         }
         if(chance<=0){
             System.exit(0);
