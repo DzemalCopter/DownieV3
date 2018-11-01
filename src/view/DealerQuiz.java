@@ -15,17 +15,18 @@ public class DealerQuiz extends JPanel
     private JButton answerC;
     private JButton answerB;
     private JPanel panel;
+    private JTextField moderator;
     private MainController mc;
     private Arbeitsplatz ap;
     private Schießen schießen;
-
+    private int chance;
 
 
 
 
     public DealerQuiz(MainController mc, Arbeitsplatz ap)
     {
-
+        chance = 3;
         this.mc = mc;
         this.ap = ap;
 
@@ -74,11 +75,18 @@ public class DealerQuiz extends JPanel
         });
     }
     public void feedback(String ans){
-        if(mc.answer(ans) == true  ){
+        if(mc.answer(ans) == true  )
+        {
 
             updateQuestionsAndAnswers();
 
 
+        }else{  chance = chance - 1;
+            moderator.setText("Falsch, sie haben noch "+ chance+"  Chancen!!");
+
+        }
+        if(chance<=0){
+            ap.lose();
         }
     }
 

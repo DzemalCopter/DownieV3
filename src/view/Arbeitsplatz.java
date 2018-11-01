@@ -8,11 +8,18 @@ public class Arbeitsplatz extends JFrame
 {
     private MainController mC;
     private int pan;
-    private JPanel töten,steuerklärung,feuern,dealerQuiz,schießen;
+    private JPanel töten,steuerklärung,feuern,dealerQuiz,schießen,lose;
+    private JPanel[] subtype;
 
     public Arbeitsplatz(MainController mainController,int pan) {
 
-
+        subtype = new JPanel[6];
+        subtype[0] = töten;
+        subtype[1] = steuerklärung;
+        subtype[2] = feuern;
+        subtype[3] = dealerQuiz;
+        subtype[4] = schießen;
+        subtype[5] = lose;
 
         this.setLocation(1050,50);
         this.setSize(1000,750);
@@ -29,6 +36,7 @@ public class Arbeitsplatz extends JFrame
         steuerklärung = new Steuererklärung(this,mC).getPanel();
         feuern = new Feuern(this).getPanel();
         schießen = new Schießen(this,mC).getPanel();
+        lose = new Lose(this,mC).getPanel();
 
 
         update(pan);
@@ -75,6 +83,12 @@ public class Arbeitsplatz extends JFrame
         mC.updateMainView();
         this.dispose();
 
+    }
+    public void lose(){
+        this.getContentPane().removeAll();
+        this.getContentPane().invalidate();
+        this.setContentPane(lose);
+        this.getContentPane().revalidate();
     }
 
 

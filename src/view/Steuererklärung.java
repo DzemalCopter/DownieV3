@@ -81,11 +81,11 @@ public class Steuererklärung extends JPanel
         } else
         {
             chance = chance - 1;
-            moderator.setText("Falsch, sie haben noch "+ chance+"  Chancen!!");
+            moderator.setText("Falsch, sie haben noch "+ chance+"  Chance(n)!!");
 
         }
         if(chance<=0){
-            System.exit(0);
+            ap.lose();
         }
     }
 
