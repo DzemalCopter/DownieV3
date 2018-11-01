@@ -50,7 +50,7 @@ public class GamePanelHandler extends JPanel
             public void actionPerformed(ActionEvent e)
             {
 
-                    mC.creatArbeitsplatz(1);
+                    mC.creatArbeitsplatz(2);
 
                 töten.setEnabled(false);
                 steuer.setEnabled(false);
@@ -64,7 +64,7 @@ public class GamePanelHandler extends JPanel
             public void actionPerformed(ActionEvent e)
             {
 
-                    mC.creatArbeitsplatz(1);
+                    mC.creatArbeitsplatz(3);
 
                 töten.setEnabled(false);
                 steuer.setEnabled(false);

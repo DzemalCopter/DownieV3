@@ -18,6 +18,7 @@ public class MainController {
    private QuestionHandler th;
    private MainView mV;
    private DealerQuiz dQ;
+   private SteuerHandler sh;
 
 
 
@@ -26,6 +27,7 @@ public class MainController {
     public MainController(){
      qh = new AuftragHandler();
      th = new QuestionHandler();
+     sh = new SteuerHandler();
 
     }
 
@@ -35,6 +37,13 @@ public class MainController {
 
     public void creatArbeitsplatz(int p){
         ap = new Arbeitsplatz(this,p );
+    }
+    public int getPlayersteuerLevel(){
+        return player.getLevel();
+    }
+
+    public void setPlayersteuerLevel(int level){
+        player.setSteuerlevel(level);
     }
 
     public void creatPlayer(String name){
@@ -76,6 +85,10 @@ public class MainController {
         }
 
         return output;
+    }
+    public String getSteuerklärung(){
+        String s = sh.getSteuerklärung(getPlayersteuerLevel());
+        return s;
     }
 
     public boolean answer(String chosenAnswer){
