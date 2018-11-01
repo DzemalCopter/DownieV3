@@ -65,6 +65,7 @@ public class Steuererklärung extends JPanel
         {
             ok.setEnabled(false);
             label.setText("gewonnen!");
+            mC.Sieg();
             mC.close();
 
         }

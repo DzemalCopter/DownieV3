@@ -20,9 +20,11 @@ public class GamePanelHandler extends JPanel
     private MainController mC;
     private String playerName;
     private int playerlevel;
+    private int stage;
 
 
     public GamePanelHandler(MainController mC, String playername, int level){
+        stage = 0;
         this.mC = mC;
         ColorSlider cs = new ColorSlider();
         this.playerlevel = level;
@@ -84,6 +86,10 @@ public class GamePanelHandler extends JPanel
         feuern.setText(s[3]);
         name.setText(playerName);
         level.setText("" + playerlevel);
+        stage = stage +1;
+        if(stage>= 5){
+
+        }
     }
 
 

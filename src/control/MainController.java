@@ -41,6 +41,9 @@ public class MainController {
     public int getPlayersteuerLevel(){
         return player.getLevel();
     }
+    public void setPlayerQuizLevel(int lvl){
+        player.setQuizLevel(lvl);
+    }
 
     public void setPlayersteuerLevel(int level){
         player.setSteuerlevel(level);
@@ -87,8 +90,15 @@ public class MainController {
         return output;
     }
     public String getSteuerklärung(){
+        if(getPlayerLevel()<=0){
+            Sieg();
+        }
         String s = sh.getSteuerklärung(getPlayersteuerLevel());
         return s;
+    }
+    public void Sieg(){
+        setPlayersteuerLevel(0);
+        setPlayerQuizLevel(0);
     }
 
     public boolean answer(String chosenAnswer){

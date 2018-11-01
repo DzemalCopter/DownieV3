@@ -24,7 +24,7 @@ public class Töten extends JPanel
     public Töten(Arbeitsplatz ap) {
         right = 0;
         this.ap = ap;
-        random = (int) Math.random() * 3 + 1;
+        random = (int) Math.random() * 4 + 1;
         if (random == 1) {
             tisch = 3;
             schrank = 2;
@@ -35,7 +35,7 @@ public class Töten extends JPanel
             schrank = 2;
             computer = 3;
         }
-        if (random == 2) {
+        if (random == 3) {
             tisch = 1;
             schrank = 3;
             computer = 2;
@@ -52,6 +52,7 @@ public class Töten extends JPanel
             public void actionPerformed(ActionEvent e)
             {
             right = tisch;
+            Check();
             geheZumDealer();
 
             }
@@ -62,6 +63,7 @@ public class Töten extends JPanel
             public void actionPerformed(ActionEvent e)
             {
                 right = schrank;
+                Check();
                 geheZumDealer();
 
             }
@@ -72,6 +74,7 @@ public class Töten extends JPanel
             public void actionPerformed(ActionEvent e)
             {
                 right = computer;
+                Check();
                 geheZumDealer();
 
             }

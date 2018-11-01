@@ -107,6 +107,7 @@ public class DealerQuiz extends JPanel
                 answerB.setEnabled(false);
                 answerC.setEnabled(false);
                 answerD.setEnabled(false);
+                mc.Sieg();
                 ap.schießen();
 
 
